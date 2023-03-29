@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "clusterhomework-87b3"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "clusterhomework-87b3"
+  template:
+    metadata:
+      labels:
+        app: "clusterhomework-87b3"
+    spec:
+      containers:
+        - name: "clusterhomework-87b3"
+          image: "finalacrfinal.azurecr.io/clusterhomework"
+          ports:
+          - containerPort: 80
